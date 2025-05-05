@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+agentic_backend/core/__pycache__/
+agentic_backend/modules/__pycache__/
+agentic_backend/config/__pycache__/
+.env
+.venv/
+telegram.env
+agentic_backend/.env
+agentic_backend/faiss_index/
+agentic_backend/documents/
+agentic_backend/faiss_index/
