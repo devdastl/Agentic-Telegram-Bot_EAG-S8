@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Dict, Any, Optional, Union, Literal
 
 # Input/Output models for tools
 
@@ -51,5 +51,21 @@ class ChunkListOutput(BaseModel):
 
 class ShellCommandInput(BaseModel):
     command: str
+
+class SendEmailInput(BaseModel):
+    """Input model for send_email tool"""
+    to: str
+    subject: str
+    message: str
+
+class SendEmailOutput(BaseModel):
+    """Output model for send_email tool"""
+    message_id: str
+
+class ErrorResponse(BaseModel):
+    """Model for error responses"""
+    error_type: str
+    message: str
+    details: Dict[str, Any] = Field(default_factory=dict)
 
 
