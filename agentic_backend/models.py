@@ -68,4 +68,23 @@ class ErrorResponse(BaseModel):
     message: str
     details: Dict[str, Any] = Field(default_factory=dict)
 
+# Google Sheets Models
+class CreateSheetInput(BaseModel):
+    """Input model for create_spreadsheet tool"""
+    title: str
+
+class SpreadsheetOutput(BaseModel):
+    """Output model for spreadsheet operations"""
+    spreadsheet_id: str
+    title: str
+    sheets: List[str]
+    url: str
+
+class ShareSheetInput(BaseModel):
+    """Input model for share_spreadsheet tool"""
+    spreadsheet_id: str
+    email: str
+    role: Literal["reader", "writer", "commenter"] = "reader"
+    send_notification: bool = True
+
 
