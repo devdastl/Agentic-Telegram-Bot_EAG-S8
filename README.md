@@ -62,4 +62,4 @@ To integrate your own agentic system:
 - `.env`: Environment variables (create this file) 
 
 ## Youtube Link
-Here is the youtube link for the [demo video](https://youtube.com)
+Here is the youtube link for the [demo video](https://youtu.be/6jVTpWrRjXc)
